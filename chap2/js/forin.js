@@ -11,6 +11,7 @@ for(var key in data){
 // 配列で使用すると、以下のような現象が起こる
 
 var data = ['apple', 'orange', 'banana'];
+// 配列オブジェクトにhogeを追加
 Array.prototype.hoge = function() {}
 for(var key in data){
 	console.log(data[key]);
