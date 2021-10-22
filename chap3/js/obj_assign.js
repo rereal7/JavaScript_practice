@@ -1,7 +1,6 @@
 // assignメソッドの注意点3点
 // 1.同名のプロパティは、上書き処理される（この例では、name）
 // 2.再帰的なマージには非対応（この例では、descriptionプロパティはまるごと上書き）
-// 3.破壊的なメソッドである
 
 let pet = {
 	type: 'スノーホワイトハムスター',
@@ -24,7 +23,7 @@ let pet3 = {
 	photo: 'http://www.wings.msn.to/img/ham.jpg'
 };
 
-// 3の回避策（からのオブジェクトにマージさせる）
+// petが上書きされてしまうことの回避策（空のオブジェクトにマージさせる）
 let merged = Object.assign({}, pet, pet2, pet3);
 console.log(merged);
 console.log(pet);
